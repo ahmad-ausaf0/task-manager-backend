@@ -5,11 +5,25 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const cors = require('cors');
+app.use(
+  cors({
+    origin: ["http://localhost:4200"], // Add your frontend URL here
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true, // If using authentication (cookies, tokens)
+  })
+);
+
+
 let tasks = [
     { id: 1, title: "Task1" },
     { id: 2, title: "Task2" },
     { id: 3, title: "Task3" }
 ];
+
+app.get("/", (req, res) => {
+    res.send("Backend is working!");
+});
 
 // Get all tasks
 app.get('/tasks', (req, res) => {
