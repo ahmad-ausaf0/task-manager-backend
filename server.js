@@ -1,19 +1,3 @@
-// import express from 'express';
-// import cors from 'cors';
-
-// const app = express();
-// app.use(express.json());
-// app.use(cors());
-
-// const cors = require('cors');
-// app.use(
-//   cors({
-//     origin: ["http://localhost:4200"], // Add your frontend URL here
-//     methods: "GET,POST,PUT,DELETE",
-//     credentials: true, // If using authentication (cookies, tokens)
-//   })
-// );
-
 import express from 'express';
 import cors from 'cors';
 
@@ -22,9 +6,9 @@ app.use(express.json());
 
 
 app.use(cors({
-  origin: ["http://localhost:4200"], // Add your frontend URL here
+  origin: ["http://localhost:4200", "https://task-manager-frontend-pnumk4ml4.vercel.app/"], 
   methods: "GET,POST,PUT,DELETE",
-  credentials: true, // If using authentication (cookies, tokens)
+  credentials: true,
 }));
 
 
