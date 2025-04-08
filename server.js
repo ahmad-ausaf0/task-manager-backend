@@ -6,7 +6,7 @@ app.use(express.json());
 
 
 app.use(cors({
-  origin: ["http://localhost:4200", "https://task-manager-frontend-pnumk4ml4.vercel.app/"], 
+  origin: ["http://localhost:4200", "https://task-manager-frontend-pnumk4ml4.vercel.app/", "https://task-manager-frontend-neon-pi.vercel.app/"], 
   methods: "GET,POST,PUT,DELETE",
   credentials: true,
 }));
